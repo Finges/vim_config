@@ -37,7 +37,16 @@ call pathogen#infect()
   Bundle 'Shougo/neosnippet'
   Bundle 'Shougo/neosnippet-snippets'
   Bundle 'honza/vim-snippets'
+  
+  "--[ Surround ]--"
+  Bundle 'tpope/vim-surround'
 
+  "--[ Syntastic ]--"
+  Bundle 'scrooloose/syntastic'
+
+  "--[ Gists ]--"
+  Bundle 'mattn/webapi-vim'
+  Bundle 'mattn/gist-vim'
 
 set laststatus=2
 set rtp+=/home/finges/.local/lib/python3.3/site-packages/powerline/bindings/vim
