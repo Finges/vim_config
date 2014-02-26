@@ -1,6 +1,4 @@
-
 set nocompatible
-
 
 "--[ Pathogen Setup ] --"
 call pathogen#infect()
