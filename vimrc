@@ -35,7 +35,7 @@ call pathogen#infect()
   Bundle 'Shougo/neosnippet'
   Bundle 'Shougo/neosnippet-snippets'
   Bundle 'honza/vim-snippets'
-  
+
   "--[ Surround ]--"
   Bundle 'tpope/vim-surround'
 
@@ -45,6 +45,12 @@ call pathogen#infect()
   "--[ Gists ]--"
   Bundle 'mattn/webapi-vim'
   Bundle 'mattn/gist-vim'
+
+  "--[ NerdTree ]--"
+  Bundle 'scrooloose/nerdtree'
+
+  "--[ Markdown ]--"
+  Bundle 'plasticboy/vim-markdown'
 
 set laststatus=2
 set rtp+=/home/finges/.local/lib/python3.3/site-packages/powerline/bindings/vim
@@ -200,3 +206,15 @@ filetype plugin indent on
     let g:neocomplcache_omni_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
     let g:neocomplcache_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
     let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::'
+
+  "--[ NerdTree ]--"
+  map <C-e> :NERDTreeToggle<CR>
+  map <leader>nt :NERDTreeFind<CR>
+
+  let NERDTreeShowBookmarks=1
+  let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git$']
+  let NERDTreeChDirMode=0
+  let NERDTreeQuitOnOpen=1
+  let NERDTreeMouseMode=2
+  let NERDTreeShowHidden=1
+  let NERDTreeKeepTreeInNewTab=1
