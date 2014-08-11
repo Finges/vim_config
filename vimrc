@@ -49,8 +49,18 @@ call pathogen#infect()
   "--[ NerdTree ]--"
   Bundle 'scrooloose/nerdtree'
 
-  "--[ Markdown ]--"
+  "--[ Syntax Highlighting ]--"
   Bundle 'plasticboy/vim-markdown'
+  Bundle 'rodjek/vim-puppet'
+
+  "--[ NerdCommenter ]--"
+  Bundle 'scrooloose/nerdcommenter'
+
+  "--[ CtrlP ]--"
+  Bundle 'kien/ctrlp.vim'
+
+  "--[ Tabular ]--"
+  Bundle 'godlygeek/tabular'
 
 set laststatus=2
 set rtp+=/home/finges/.local/lib/python3.3/site-packages/powerline/bindings/vim
@@ -134,6 +144,11 @@ filetype plugin indent on
     let g:neocomplcache_enable_auto_delimiter = 1
     let g:neocomplcache_max_list = 15
     let g:neocomplcache_force_overwrite_completefunc = 1
+    " Use honza's snippets.
+    let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
+    " Enable neosnippet snipmate compatibility mode
+    let g:neosnippet#enable_snipmate_compatibility = 1
+     "
 
     " Define dictionary.
     let g:neocomplcache_dictionary_filetype_lists = {
@@ -218,3 +233,10 @@ filetype plugin indent on
   let NERDTreeMouseMode=2
   let NERDTreeShowHidden=1
   let NERDTreeKeepTreeInNewTab=1
+
+  "-- [ CTRL-P ]--"
+  map <leader>b :CtrlPBuffer<CR>
+
+  "-- [ Tabular ]--"
+  map <leader>a= :Tabularize /=<CR>
+  map <leader>a> :Tabularize /=><CR>
