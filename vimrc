@@ -82,6 +82,7 @@ set scrolljump=5            " Lines to scroll when cursor leaves screen
 set scrolloff=3             " Minimum lines to keep above/below cursor
 set background=dark         " Set a dark background
 colorscheme solarized       " Set colorscheme to Solarized Dark
+set re=1                    " Set regex engine to old http://stackoverflow.com/questions/16902317/vim-slow-with-ruby-syntax-highlighting
 
 
 "-- [ Formatting ]--"
@@ -95,6 +96,8 @@ set splitright              " Puts new vsplit window to the right
 set splitbelow              " Puts new hsplit window to the bottom
 set cursorline              " Highlight current line
 
+"-- [ Set Clipboard ]--"
+set clipboard+=unnamed
 "-- [ Set tabs for python ] --"
 autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=4
 
@@ -240,3 +243,4 @@ filetype plugin indent on
   "-- [ Tabular ]--"
   map <leader>a= :Tabularize /=<CR>
   map <leader>a> :Tabularize /=><CR>
+  map <leader>a: :Tabularize /:<CR>
